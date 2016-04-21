@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,500italic,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<!-- Fixed Header -->
+	<header>
+		<button class = "title"></h1>JOANNA CHIN</h1></button>
+		<div class ="subtitle"><h2>interaction designer</h2></div>
+		<button class="about">ABOUT</button>
+		<button class="process">PROCESS</button>
+		<div id="nav">
+			<h3>mobile + game</h3>
+			<button class="workBtn">d.bot</button><br>
+			<button class="workBtn">Last Night</button><br>
+			<button class="workBtn">Remember Remember</button><br>
+			<button class="workBtn">Room 1206</button><br>
+			<button class="workBtn">Bang Bang</button><br>
+			<button class="workBtn">Privilege</button><br>
+			<br>
+			<h3>experience design</h3>
+			<button class="workBtn">Post from the Past</button><br>
+			<button class="workBtn">Red Bull: Where's the Party At?</button><br>
+			<button class="workBtn">LAMA</button><br>
+			<button class="workBtn">RentersRATE</button><br>
+			<button class="workBtn">Banal Chaos</button><br>
+			<br>
+			<h3>data visualization</h3>
+			<button class="workBtn">NYC Mayor's Office</button><br>
+			<button class="workBtn">Decision Tracking</button><br>
+			<button class="workBtn">Pitch Slam</button><br>
+			<button class="workBtn">Quake</button><br>
+			<br>
+			<h3>fabrication</h3>
+			<button class="workBtn">Freedom from Fear</button><br>
+			<button class="workBtn">Octopi Wall Street</button><br>
+			<button class="workBtn">Daraprim Dollar $ign</button><br>
+			<!-- <button class="workBtn">God is Watching</button><br> -->
+			<button class="workBtn">Jewelry</button><br>
+			<br><br>
+<!-- 			<h3>visual art</h3> -->
+			<br><br>
+		</div>
+	</header>
+	<!-- View container where pages are rendered -->
+	<div id="view"></div>
+	<!-- Fixed Footer -->
+	<br>
+	<footer>
+		<h4 div class="footerTxt">Web Development || Mobile || Prototyping + Fabrication || UI/UX || Narrative + Game Design || Transmedia</div></h4>
+	</footer>
+
+	<!-- Template for Work page -->
+	<script type="text/html" id="tpl_work">
+		<div class="page" id="work">
+			<div id = "imageBlock">
+			</div>
+		</div>
+	</script>
+
+	<!-- Template for Projects page -->
+	<script type="text/html" id="tpl_project">
+		<div class="page" id="project">
+			<div id="mainImg"></div>
+			<div class="projectTitle"><h4><%= title %></h4></div>
+			<div id="tagline"><h4><%= tagline %></h4></div>
+			<div class="description"><%= description %></div>
+			<br>
+			<div class="description"><%= link %></div>
+			<br>
+			<div id="otherImg"></div>
+			<br>
+			<button class="backBtn"><- back</button>
+			<br><br>
+		</div>
+	</script>
+
+	<!-- Template for About page -->
+	<script type="text/html" id="tpl_about">
+		<div class="page" id="about">
+			<div id="mainImg"></div>
+			<div class="projectTitle"><h4><%= title %></h4></div>
+			<div id="tagline"><h4><%= tagline %></h4></div>
+			<div id="profilePic">
+			<img src="images/jo_picture.jpg">
+			</div>
+			<div class="description"><%= description %></div>
+			<div class="subTitle"><a href="images/JChin_resume2016.pdf" download>DOWNLOAD RESUME (PDF)</a></div>
+			<br><br>
+		</div>
+	</script>
+
+	<!-- Template for Job page -->
+	<script type="text/html" id="tpl_process">
+		<div class="page" id="process">
+			<div class="projectTitle"><h4><%= title %></h4></div>
+			<div id="tagline"><h4><%= tagline %></h4></div>
+			<div class="description"><%= description %></div>
+			<br>
+			<div class="jobImg">
+			<a href="#PostfromthePast-process" class="projprocessBtn" id="PostfromthePast-process"><img src="images/post_square.jpg" onmouseover="this.src='images/post_darksquare2.jpg'" onmouseout="this.src='images/post_square.jpg'">
+			<a href="#NYCMayorsOffice-process" class="projprocessBtn" id="NYCMayorsOffice-process"><img src="images/mayors_square.jpg" onmouseover="this.src='images/mayors_darksquare2.jpg'" onmouseout="this.src='images/mayors_square.jpg'">
+			<br>
+			<a href="#LAMA-process" class="projprocessBtn" id="LAMA-process"><img src="images/lama_square.gif" onmouseover="this.src='images/lama_darksquare.jpg'" onmouseout="this.src='images/lama_square.gif'">
+			<a href="#LastNight-process" class="projprocessBtn" id="LastNight-process"><img src="images/lastnight_square.jpg" onmouseover="this.src='images/lastnight_darksquare2.jpg'" onmouseout="this.src='images/lastnight_square.jpg'">
+			<br>
+			<!-- <div id="otherImg"></div> -->
+			<br>
+			<button class="backBtn"><- back</button>
+			<br><br>
+		</div>
+	</script>
+
+	<!-- Template for Project Process page -->
+	<script type="text/html" id="tpl_projprocess">
+		<div class="page" id="projprocess">
+			<div id="mainImg"></div>
+			<div class="projectTitle"><h4><%= title %></h4></div>
+			<div id="tagline"><h4><%= tagline %></h4></div>
+			<div class="description"><%= description %></div>
+			<div class="subTitle"><h4>ROLE</h4></div>
+			<div class="description"><%= role %></div>
+			<div class="subTitle"><h4>PROCESS</h4></div>
+			<div id="img1"></div>
+			<div class="description"><%= description1 %></div>
+			<br>
+			<div id="img2"></div>
+			<div class="description"><%= description2 %></div>
+			<br>
+			<div id="img3"></div>
+			<div id="img4"></div>
+			<br>
+			<div class="description"><%= description3 %></div>
+			<br>
+			<div id="otherVid"><%= otherVid %></div>
+			<br>
+			<button class="backBtn"><- back</button>
+			<br><br>
+		</div>
+	</script>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/underscore-min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
